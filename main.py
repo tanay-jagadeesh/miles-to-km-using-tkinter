@@ -16,6 +16,9 @@ miles_label.grid(column = 2, row = 0)
 km_label = Label(text = "Km", font = ("Arial", 15))
 km_label.grid(column = 2, row = 1)
 
+miles_label = Label(text = "", font = ("Arial", 15))
+miles_label.grid(column = 1, row = 1)
+
 button = Button(text = "Calculate")
 button.pack()
 
@@ -23,11 +26,8 @@ entry = Entry(width=30)
 
 
 def button_clicked():
-    entry.get() * 1.609
-
-
-
-
+    miles_calc = entry.get() * 1.609
+    miles_label = Label(text = miles_calc, font = ("Arial", 15))
 
 window.mainloop()
           
