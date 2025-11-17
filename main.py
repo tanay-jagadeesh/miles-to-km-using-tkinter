@@ -19,6 +19,12 @@ km_label.grid(column = 2, row = 1)
 button = Button(text = "Calculate")
 button.pack()
 
+entry = Entry(width=30)
+
+
+def button_clicked():
+    entry.get() * 1.609
+
 
 
 
