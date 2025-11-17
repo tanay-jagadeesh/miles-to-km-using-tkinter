@@ -3,7 +3,7 @@ from tkinter import *
 window = Tk()
 window.title("Mile to Km Converter")
 
-window.minsize(height = 100, width = 300)
+window.minsize(height = 100, width = 200)
 
 # Making the labels
 
@@ -19,16 +19,16 @@ km_label.grid(column = 2, row = 1)
 miles_label = Label(text = "", font = ("Arial", 15))
 miles_label.grid(column = 1, row = 1)
 
-button = Button(text="Calculate", command= button_clicked)
-button.grid(column =1, row = 2)
-
 entry = Entry(width=30)
-entry.grid(column = 1, row = 1)
+entry.grid(column = 1, row = 0)
 
 
 def button_clicked():
-    miles_calc = float(entry.get() * 1.609)
-    result_label.config(text = miles_calc)
+    miles_calc = float(entry.get()) * 1.609
+    miles_label.config(text = miles_calc)
+
+button = Button(text="Calculate", command= button_clicked)
+button.grid(column =1, row = 2)
 
 window.mainloop()
           
